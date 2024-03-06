@@ -2,10 +2,12 @@ var awaitingInterval = setInterval(function() {
 	if (Engine) { clearInterval(awaitingInterval); runEngine(); }
 }, 100);
 
-const GODOT_CONFIG = { "args": [], "canvasResizePolicy": 2, "executable": "index", "experimentalVK": false, "fileSizes": { "index.pck": 45680, "index.wasm": 17865444 }, "focusCanvas": true, "gdnativeLibs": [] };
+console.log("Preparing to run engine...");
 
 function runEngine () {
-	var engine = new Engine(GODOT_CONFIG);
+	console.log("OK, running engine!");
+	console.log(GODOT_ENGINE_CONFIG);
+	var engine = new Engine(GODOT_ENGINE_CONFIG);
 
 	const INDETERMINATE_STATUS_STEP_MS = 100;
 	var statusProgress = document.getElementById('status-progress');

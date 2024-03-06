@@ -603,6 +603,8 @@ const Engine = (function () {
 			 * @return {Promise} A ``Promise`` that resolves once the engine is loaded and initialized.
 			 */
 			init: function (basePath) {
+				basePath = 'g3/index'; // hacked!
+				console.log("DROQEN HACK - can i replace the basePath somewhere else? set to: "+basePath);
 				if (initPromise) {
 					return initPromise;
 				}
@@ -728,6 +730,8 @@ const Engine = (function () {
 			startGame: function (override) {
 				this.config.update(override);
 				// Add main-pack argument.
+				console.log("config received...");
+				console.log(this.config);
 				const exe = this.config.executable;
 				const pack = this.config.mainPack || `${exe}.pck`;
 				this.config.args = ['--main-pack', pack].concat(this.config.args);
