@@ -1,1 +1,0 @@
-godot wasm file has been excluded due to size.
