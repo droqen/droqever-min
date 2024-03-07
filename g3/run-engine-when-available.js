@@ -1,6 +1,9 @@
+var intervalAttempts = 2000;
 var awaitingInterval = setInterval(function() {
-	if (Engine) { clearInterval(awaitingInterval); runEngine(); }
-}, 100);
+	if (intervalAttempts > 0) { intervalAttempts--; }
+	else { clearInterval(awaitingInterval); console.log("TIMED OUT, no engine found after 2000 ms. TODO: HANDLE THIS CASE BETTER") }
+	if (typeof Engine !== 'undefined') { clearInterval(awaitingInterval); console.log("Engine found after " + (2000-intervalAttempts) + "ms."); runEngine(); }
+}, 1);
 
 console.log("Preparing to run engine...");
 
