@@ -1,10 +1,7 @@
 let gameBaseSize = [100, 100];
 let canvas = document.getElementById("canvas");
-let canvaspad = document.getElementById("gamegoeshere");
 canvas.style.position = "absolute";
 canvas.style.display = "none";
-canvaspad.style.position = "absolute";
-canvaspad.style.display = "none";
 let lastAvailSize = [100, 100];
 let somethingChanged = false;
 let somethingChangedTimeout = 0;
@@ -52,14 +49,6 @@ setInterval(function() {
 			canvas.style.left = left + 'px';
 			canvas.style.top = top + 'px';
 			canvas.style.display = "";
-
-			canvaspad.style.width = (w-16) + 'px';
-			canvaspad.style.height = (h-16) + 'px';
-			canvaspad.style.left = (left+8-4) + 'px';
-			canvaspad.style.top = (top+8-4) + 'px';
-			canvaspad.style.display = "flex";
-			canvaspad.style.alignItems = "center";
-			canvaspad.style.alignContent = "center";
 
 			somethingChanged = false;
 		// }

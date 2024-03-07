@@ -5,9 +5,6 @@
 	HTML5 canvas appears to be unsupported in the current browser.<br />
 	Please try updating or use a different browser.
 </canvas>
-<div id='gamegoeshere' style='border: 4px dashed #333; padding:0; margin:0; border-radius:10px; z-index: -1; display:none;'>
-	<!-- <p style="text-align:center; width:100%; font-size: large; font-weight: 600; color: #666;">game<br/>goes<br/>here</p> -->
-</div>
 <div id='status'>
 	<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'>
 		<div id='status-progress-inner'></div>
